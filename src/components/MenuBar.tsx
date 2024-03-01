@@ -32,9 +32,9 @@ const MenuBar = () => {
     setIsOpen(!isOpen);
     };
   return ( 
-    <div className='my-4'>
+    <div className='my-4 mt-0 sm:mt-4'>
         <button
-        className={`text-white w-[30%] my-2 px-4 py-2 rounded-md bg-[#212731] hover:bg-[#323d50] focus:outline-none focus:ring-2 focus:ring-offset-2 transition-all duration-300 sm:hidden ${
+        className={`text-white w-[30%] mb-2 px-4 py-2 rounded-md bg-[#212731] hover:bg-[#323d50] focus:outline-none focus:ring-2 focus:ring-offset-2 transition-all duration-300 sm:hidden ${
             isOpen ? `mb-0` : ''
         }`}
         onClick={toggleDropdown}
