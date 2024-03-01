@@ -58,9 +58,10 @@ const Footer = () => {
     const [isHidden,setHidden] = useState(false)
 
     const display = isHidden ? null : 'hidden'
+    
 
   return (
-    <div className='bg-[#212731] grid grid-cols-2 grid-rows-2 sm:flex sm:flex-row justify-evenly items-start sm:pb-5 pb-0 text-white'>
+    <div className='bg-[#212731] grid grid-cols-2 grid-rows-2 sm:flex sm:flex-row justify-evenly items-start sm:pb-5 pb-1 text-white h-fit'>
         {
             footerData.map((tab) => {
                 return (
@@ -69,7 +70,7 @@ const Footer = () => {
                         <div className='justify-evenly'>
                         { tab.links.map((link)=>{
                             return (
-                                    <p className={`${display} sm:block text-sm text-[#B6BDC4] mt-4 h-5`}>{link.name}</p>
+                                    <p key={link.id} className={`${display} sm:block text-sm text-[#B6BDC4] mt-4 h-5`}>{link.name}</p>
                             )
                         })}
                         </div>
@@ -77,7 +78,7 @@ const Footer = () => {
                 )
             })
         }
-        <div className='col-span-2 w-auto row-start-2 mx-auto mb-0 sm:mt-24 sm:pt-10 font-weight-100 sm:w-[90px] sm:h-[20px]'>
+        <div className='col-span-2 w-auto row-start-2 mx-auto  sm:mt-24 sm:pt-10 font-weight-100 sm:w-[90px] sm:h-[20px]'>
             <CountrySelector />            
         </div>
     </div>

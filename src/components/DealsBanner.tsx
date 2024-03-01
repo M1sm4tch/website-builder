@@ -35,16 +35,14 @@ const DealSectionProducts : SpecialDealProduct[] = [
 
 const DealsBanner = () => {
   return (
-    <div className='flex flex-row justify-center'>
-        <div className=''>
-            <div className='text-[#2C384A] text-4xl w-[80vw]'>
-                Related deals you might look for
-            </div>
-            <div className='grid grid-cols-3'>
-                {DealSectionProducts.map((product)=>(
-                    <DealCardVertical key={product.id} product={product} className={''} />
-                ))}
-            </div>
+    <div className='flex flex-col items-center '>
+        <div className='text-[#2C384A] text-2xl text-center sm:text-left sm:text-4xl sm:w-[80vw]'>
+            Related deals you might look for
+        </div>
+        <div className='flex flex-row gap-2 w-full overflow-x-auto'>
+            {DealSectionProducts.map((product)=>(
+                <DealCardVertical key={product.id} product={product} className={''} />
+            ))}
         </div>
     </div>
   )

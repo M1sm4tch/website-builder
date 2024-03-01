@@ -2,20 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-.star-rating {
-    @apply flex items-center;
-  }
-  
-  .star,
-  .half-star {
-    @apply text-xl; /* Adjust font size as needed */
-  }
-  
-  .star {
-    @apply text-yellow-500;
-  }
-  
-  .half-star {
-    @apply text-yellow-500 opacity-50;
-  }
-  
+*{
+  margin: 0;
+  border: 0;
+}
+
