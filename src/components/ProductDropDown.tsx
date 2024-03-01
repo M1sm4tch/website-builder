@@ -1,5 +1,5 @@
 "use client"
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Select from 'react-select';
 
 
@@ -17,6 +17,10 @@ const options: Option[] = [
 const ProductDropdown: React.FC = () => {
   const [selectedOption, setSelectedOption] = useState<Option | null>(options[0]);
 
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => setIsMounted(true), [])
+
   const handleChange = (newValue: any, actionMeta: any) => {
     setSelectedOption(newValue as Option);
   };
@@ -24,11 +28,24 @@ const ProductDropdown: React.FC = () => {
   return (
     <div>
       <Select
+        instanceId={'wsad123wqwe'}
         value={selectedOption}
         onChange={handleChange}
         options={options}
         unstyled
         isSearchable={false}
+        className='bg-white hover:border-gray-200 hover:border w-[100px]'
+        hideSelectedOptions
+        styles = {{
+          menu: (baseStyles, state)=> ({
+            ...baseStyles,
+            backgroundColor: "white",
+            paddingTop: "0px",
+            padding: "5px",
+            width: "100px",
+            boxShadow: "2px",
+          })
+        }}
       />
     </div>
   );

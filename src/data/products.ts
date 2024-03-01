@@ -7,6 +7,7 @@ export const products = [
       reviews: "Exceptional",
       description: "Comprehensive Digital Platform Creation Tool, Streamlined Design Interface for Professional Websites and Online Stores (Black/Blue)",
       highlights: [
+        "[What you get]:",
         "Receive the WixPro website builder suite,",
         "access to premium design templates,",
         "an extensive library of widgets and apps,",
@@ -22,6 +23,7 @@ export const products = [
       reviews: "Excellent",
       description: "Advanced Site Creation Toolkit, Intuitive Drag-and-Drop Editor for Dynamic Websites and E-commerce Platforms (Green/White)",
       highlights: [
+        "[What you get]:",
         "Gain access to the SiteCraft design studio,",
         "featuring a robust selection of design elements,",
         "SEO optimization tools,",
@@ -37,6 +39,7 @@ export const products = [
       reviews: "Exceptional",
       description: "Comprehensive Digital Platform Creation Tool, Streamlined Design Interface for Professional Websites and Online Stores (Black/Blue)",
       highlights: [
+        "[What you get]:",
         "Receive the WixPro website builder suite,",
         "access to premium design templates,",
         "an extensive library of widgets and apps,",

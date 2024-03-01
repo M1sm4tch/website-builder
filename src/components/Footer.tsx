@@ -1,5 +1,5 @@
 "use client"
-import React from 'react'
+import React, {useState} from 'react'
 import CountrySelector from './CountrySelector'
 
 
@@ -55,19 +55,22 @@ const footerData = [
 ]
 
 const Footer = () => {
+    const [isHidden,setHidden] = useState(false)
+
+    const display = isHidden ? null : 'hidden'
+    
+
   return (
-    <div className='bg-[#212731] flex flex-row justify-evenly items-start h-[28.25rem] text-white'>
+    <div className='bg-[#212731] grid grid-cols-2 grid-rows-2 sm:flex sm:flex-row justify-evenly items-start sm:pb-5 pb-1 text-white h-fit'>
         {
             footerData.map((tab) => {
                 return (
-                    <div className='mt-24 h-[60%]' key={tab.id}>
+                    <div onClick={()=>setHidden(!isHidden)} className='row-span-1 mx-auto mt-10 sm:mt-24 h-[60%]' key={tab.id}>
                         <p className='h-6 '>{tab.name}</p>
                         <div className='justify-evenly'>
                         { tab.links.map((link)=>{
                             return (
-                                <div  key={link.id}>
-                                    <p className="text-[#B6BDC4]  mt-4 h-5">{link.name}</p>
-                                </div>
+                                    <p key={link.id} className={`${display} sm:block text-sm text-[#B6BDC4] mt-4 h-5`}>{link.name}</p>
                             )
                         })}
                         </div>
@@ -75,7 +78,7 @@ const Footer = () => {
                 )
             })
         }
-        <div className='mt-24 pt-10 font-weight-100 w-[90px] h-[20px]'>
+        <div className='col-span-2 w-auto row-start-2 mx-auto  sm:mt-24 sm:pt-10 font-weight-100 sm:w-[90px] sm:h-[20px]'>
             <CountrySelector />            
         </div>
     </div>

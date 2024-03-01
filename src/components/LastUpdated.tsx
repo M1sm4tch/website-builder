@@ -7,12 +7,12 @@ interface props {
 }
 const LastUpdated = ({className}:props) => {
   return (
-    <div className={`flex flex-row items-center ${className}`}>
-        <CheckCircleIcon className='h-6'/>
-        <p>Last Updated -</p>
-        <CurrentDate />
-        <InformationCircleIcon className='h-6'/>
-        <p>Advertising Disclosure</p>
+    <div className={`flex flex-row items-center ${className} sm:flex-wrap sm:justify-between h-5 `}>
+      <CheckCircleIcon className="h-full" />
+      <p>Last Updated -</p>
+      <CurrentDate />
+      <InformationCircleIcon className="h-full" />
+      <p>Advertising Disclosure</p>
     </div>
   )
 }
